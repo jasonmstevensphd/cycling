@@ -91,6 +91,6 @@ bikeWrapper <- function(df, bike, metric){
   
 }
 
-bikeWrapper(df, "Peloton", "Total_Time")
+bikeWrapper(df, "Peloton", "Total_Distance")
 
 
