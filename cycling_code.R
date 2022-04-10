@@ -94,3 +94,10 @@ bikeWrapper <- function(df, bike, metric){
 bikeWrapper(df, "Peloton", "Total_Distance")
 
 
+ytd_miles <- cycling %>% filter(Date > "2021-12-31") %>%
+  group_by(Bike) %>%
+  summarize(Total_Miles = sum(Miles))
+
+q1_miles <- cycling %>% filter(Date > "2021-12-31" & Date < "2022-04-01") %>%
+  group_by(Bike) %>%
+  summarize(Total_Miles = sum(Miles))
